@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Guess</title>
+</head>
+<body>
+    <header>
+        <h1>Quem é esse Pokémon?</h1>
+    </header>
+    
+    <main>
+        <div class="pokemon-info">
+            <p>Moves: <%= Enum.join(@moves, ", ") %></p>
+            <p>Types: <%= Enum.join(@types, ", ") %></p>
+            <p>Species: <%= @specie %></p>
+            <p>Abilities: <%= Enum.join(@abilities, ", ") %></p>
+            <img src={@image} alt="Imagem do Pokémon" />
+        </div>
+
+        
+        <div class="guess-form">
+            <input type="text" class="guess-input" placeholder="Digite o nome do Pokémon...">
+            <button class="guess-button">Chutar!</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Poke Guess</p>
+    </footer>
+</body>
+</html>

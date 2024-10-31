@@ -1,0 +1,138 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+/* Estilos globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Cabeçalho */
+header {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px #005ea3;
+}
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pokemon-info {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.pokemon-info:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.pokemon-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+/* Formulário de chute */
+.guess-form {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.guess-input {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+.guess-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+/* Botão de chute */
+.guess-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+.guess-button:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+}
+/* Rodapé */
+footer {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+footer p {
+    font-size: 0.9rem;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; /* Espaçamento acima do contador */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f0f8ff; /* Cor de fundo leve */
+  border: 2px solid #4CAF50; /* Cor da borda */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.score-label {
+  font-size: 1.5rem; /* Tamanho da fonte para o label */
+  color: #333; /* Cor do texto do label */
+  margin-right: 8px; /* Espaçamento entre label e valor */
+}
+
+.score-value {
+  font-size: 1.8rem; /* Tamanho da fonte para o valor do score */
+  color: #4CAF50; /* Cor verde para o valor do score */
+  font-weight: bold; /* Negrito */
+  background: linear-gradient(45deg, #a8e063, #56ab2f); /* Gradiente de fundo */
+  -webkit-background-clip: text; /* Clip para o gradiente */
+  -webkit-text-fill-color: transparent; /* Preenchimento do texto */
+}
